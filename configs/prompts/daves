@@ -1,3 +1,3 @@
 NAME=daves
 DESC="DaveMDS Prompt"
-PROMPT="#retcode2#_LIGHT__GREEN_#username#@#hostname# _BLUE_#pwd#_MAGENTA_#git# _BLUE_#prompt# "
+PROMPT="#termtitle##retcode2#_LIGHT__GREEN_#username#@#hostname# _BLUE_#pwd#_MAGENTA_#git# _BLUE_#prompt# "

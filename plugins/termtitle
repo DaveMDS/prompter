@@ -1,0 +1,3 @@
+NAME=termtitle
+DESC="Change the terminal window title"
+OUT='\e]0;\u@\h: \w\a'
