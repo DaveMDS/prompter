@@ -1,0 +1,3 @@
+NAME="retcode2"
+DESC="Show the return code of the last command with a red or green symbol"
+OUT='$([ $? = 0 ] && echo "_GREEN_✔_OFF_" || echo "_RED_✘_OFF_")'

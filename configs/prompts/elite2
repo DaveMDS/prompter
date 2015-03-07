@@ -1,0 +1,3 @@
+NAME=elite2
+DESC="Elite2 from Bashprompt Themes"
+PROMPT="_LIGHT__GRAY_┌_CYAN_─(#username#_GRAY_@_CYAN_#hostname#)─(#historynum#_GRAY_/_CYAN_#tty#)─(#time12#_GRAY_:_CYAN_#dateshort#)─_GRAY_─\n└_CYAN_─(#prompt#_GRAY_:_CYAN_#pwd#)─_GRAY_─_OFF_ "

@@ -1,0 +1,3 @@
+NAME=mint
+DESC="Stock Linux Mint Prompt"
+PROMPT="_RED_#retcode#_LIGHT__GREEN_#username#@#hostname# _BLUE_#pwd# #prompt# "

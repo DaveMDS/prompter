@@ -1,0 +1,3 @@
+NAME="hostname"
+DESC="Show hostname"
+OUT="\h"

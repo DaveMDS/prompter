@@ -1,0 +1,13 @@
+NAME="retcode"
+DESC="Show the return code of the last command if not zero"
+OUT='$(returncode)'
+
+function returncode
+{
+  returncode=$?
+  if [ $returncode != 0 ]; then
+    echo "[$returncode]"
+  else
+    echo ""
+  fi
+}

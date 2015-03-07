@@ -1,0 +1,3 @@
+NAME="dateshort"
+DESC="Short date such as: 01/13/99"
+OUT="$(date +%m/%d/%y)"

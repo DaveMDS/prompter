@@ -1,0 +1,3 @@
+NAME="pwd"
+DESC="Print working directory"
+OUT="\w"

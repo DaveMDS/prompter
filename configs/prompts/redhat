@@ -1,0 +1,3 @@
+NAME=redhat
+DESC="Stock RedHat 5.1 Prompt"
+PROMPT="[#username#@#hostname# #pwd#]#prompt# "

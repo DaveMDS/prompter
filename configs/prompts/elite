@@ -1,0 +1,3 @@
+NAME=elite
+DESC="Elite from Bashprompt Themes"
+PROMPT="_RED_┌─_BLUE_(_RED_#username#_BLUE_@_RED_#hostname#_BLUE_)_RED_─_BLUE_(_RED_#time24#_BLUE_-:-_RED_#datelong#_BLUE_)_RED_--_BLUE_]_RED_-\n└─_BLUE_(_RED_#pwd#_BLUE_)_RED_─ "

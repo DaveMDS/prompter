@@ -1,0 +1,3 @@
+NAME="prompt"
+DESC="Show # if root, $ otherwise"
+OUT="\$"

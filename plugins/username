@@ -1,0 +1,3 @@
+NAME="username"
+DESC="Show logged username"
+OUT="\u"

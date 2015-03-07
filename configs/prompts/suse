@@ -1,0 +1,3 @@
+NAME=suse
+DESC="Stock Suse Prompt"
+PROMPT="#username#@#hostname#:#pwd# > "
