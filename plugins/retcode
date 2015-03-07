@@ -1,4 +1,4 @@
-NAME="retcode"
+NAME=retcode
 DESC="Show the return code of the last command if not zero"
 OUT='$(returncode)'
 

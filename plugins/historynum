@@ -1,3 +1,3 @@
-NAME="historynum"
+NAME=historynum
 DESC="History command number"
-OUT="\#"
+OUT='\#'

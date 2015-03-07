@@ -1,3 +1,3 @@
-NAME="prompt"
+NAME=prompt
 DESC="Show # if root, $ otherwise"
-OUT="\$"
+OUT='\$'

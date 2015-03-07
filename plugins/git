@@ -1,3 +1,3 @@
-NAME="git"
+NAME=git
 DESC="Show git repository information"
 OUT='$(__git_ps1)'
