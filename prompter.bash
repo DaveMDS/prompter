@@ -42,7 +42,7 @@ function _prompter_read_plugins
 function prompter_apply
 {
     local name=`cat $PROMPTER_CONFIGS_DIR/current`
-    source "$PROMPTER_PROMPTS_DIR/$name"
+    source "$PROMPTER_PROMPTS_DIR/${name}.prompt"
     local prompt=$PROMPT
     unset NAME DESC PROMPT
     for name in "${!PROMPTER_PLUGINS[@]}"; do
@@ -62,7 +62,7 @@ function prompter_select
     local filename
     local current=`cat $PROMPTER_CONFIGS_DIR/current`
     local cur
-    for filename in $PROMPTER_PROMPTS_DIR/*; do
+    for filename in $PROMPTER_PROMPTS_DIR/*.prompt; do
         source $filename
         prompts[$i]=$NAME
         [ ${prompts[$i]} == $current ] && cur="*" || cur=" "
