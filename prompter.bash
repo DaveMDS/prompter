@@ -32,7 +32,7 @@ declare -A PROMPTER_PLUGINS
 function _prompter_read_plugins
 {
     local filename
-    for filename in $PROMPTER_PLUGINS_DIR/*; do
+    for filename in $PROMPTER_PLUGINS_DIR/*.plug; do
         source $filename
         PROMPTER_PLUGINS[$NAME]=$OUT
         unset NAME DESC OUT
