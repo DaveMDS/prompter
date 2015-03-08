@@ -41,7 +41,11 @@ function _prompter_read_plugins
 
 function prompter_apply
 {
-    local name=`cat $PROMPTER_CONFS_DIR/current`
+    local name=$(cat $PROMPTER_CONFS_DIR/current 2> /dev/null)
+    if [ ! -e $PROMPTER_PROMPTS_DIR/${name}.prompt ]; then
+        echo "No prompt selected, please run: prompter_select"
+        return
+    fi
     source "$PROMPTER_PROMPTS_DIR/${name}.prompt"
     local prompt=$PROMPT
     unset NAME DESC PROMPT
@@ -60,12 +64,12 @@ function prompter_select
     local prompts=()
     local i=1
     local filename
-    local current=`cat $PROMPTER_CONFS_DIR/current`
+    local current=$(cat $PROMPTER_CONFS_DIR/current 2> /dev/null)
     local cur
     for filename in $PROMPTER_PROMPTS_DIR/*.prompt; do
         source $filename
         prompts[$i]=$NAME
-        [ ${prompts[$i]} == $current ] && cur="*" || cur=" "
+        [ "${prompts[$i]}" == "$current" ] && cur="*" || cur=" "
         echo "$i) ${cur}${prompts[$i]} ($DESC)"
         let i++
         unset NAME DESC PROMPT
