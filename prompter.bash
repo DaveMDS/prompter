@@ -1,7 +1,7 @@
 #!/bin/bash
 
-PROMPTER_PLUGINS_DIR="${HOME}/prompter/plugins"
-PROMPTER_CONFIGS_DIR="${HOME}/prompter/configs"
+PROMPTER_PLUGS_DIR="${HOME}/prompter/plugs"
+PROMPTER_CONFS_DIR="${HOME}/prompter/confs"
 PROMPTER_PROMPTS_DIR="${HOME}/prompter/prompts"
 
 declare -A PROMPTER_COLS
@@ -32,7 +32,7 @@ declare -A PROMPTER_PLUGINS
 function _prompter_read_plugins
 {
     local filename
-    for filename in $PROMPTER_PLUGINS_DIR/*.plug; do
+    for filename in $PROMPTER_PLUGS_DIR/*.plug; do
         source $filename
         PROMPTER_PLUGINS[$NAME]=$OUT
         unset NAME DESC OUT
@@ -41,7 +41,7 @@ function _prompter_read_plugins
 
 function prompter_apply
 {
-    local name=`cat $PROMPTER_CONFIGS_DIR/current`
+    local name=`cat $PROMPTER_CONFS_DIR/current`
     source "$PROMPTER_PROMPTS_DIR/${name}.prompt"
     local prompt=$PROMPT
     unset NAME DESC PROMPT
@@ -60,7 +60,7 @@ function prompter_select
     local prompts=()
     local i=1
     local filename
-    local current=`cat $PROMPTER_CONFIGS_DIR/current`
+    local current=`cat $PROMPTER_CONFS_DIR/current`
     local cur
     for filename in $PROMPTER_PROMPTS_DIR/*.prompt; do
         source $filename
@@ -77,7 +77,7 @@ function prompter_select
         # d|D) echo "DELETE";;
         # m|M) echo "MODIFY";;
         *)
-            echo ${prompts[$REPLY]} > $PROMPTER_CONFIGS_DIR/current
+            echo ${prompts[$REPLY]} > $PROMPTER_CONFS_DIR/current
             prompter_apply
         ;;
     esac
