@@ -70,7 +70,7 @@ function prompter_select
         source $filename
         prompts[$i]=$NAME
         [ "${prompts[$i]}" == "$current" ] && cur="*" || cur=" "
-        echo "$i) ${cur}${prompts[$i]} ($DESC)"
+        echo -e "$i) ${cur}${prompts[$i]} \t$DESC"
         let i++
         unset NAME DESC PROMPT
     done
