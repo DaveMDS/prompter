@@ -1,3 +1,5 @@
 NAME=git
 DESC="Show git repository information"
 OUT='$(__git_ps1)'
+
+export GIT_PS1_SHOWDIRTYSTATE=1
