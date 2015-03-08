@@ -4,5 +4,6 @@ OUT='$(_prompter_uptime)'
 
 function _prompter_uptime
 {
-    echo "`uptime | awk -F[a-z]: '{print $2}'`"
+    #echo "`uptime | awk -F[a-z]: '{print $2}'`" for non linux systems
+    echo "`cat /proc/loadavg | cut -d' ' -f1,2,3`"
 }
