@@ -1,0 +1,9 @@
+NAME=power
+DESC="Power user prompt inspired by Power Prompt 2"
+PROMPT='#termtitle#_BLUE_\
+[_RED_#time24#_BLUE_]\
+[_RED_#username#@#hostname#_BLUE_]\
+[_WHITE_#numfile#.#numhidfile#f #numdir#.#numhiddir#d_BLUE_]\
+[_YELLOW_load #load#_BLUE_]\
+[_WHITE_#procs#proc_BLUE_]\
+\n[_RED_#pwdfull#_BLUE_]_WHITE_$ '

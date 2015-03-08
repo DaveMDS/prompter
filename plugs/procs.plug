@@ -1,0 +1,3 @@
+NAME=procs
+DESC="Show number of running proceses"
+OUT='$(ps ax | wc -l)'

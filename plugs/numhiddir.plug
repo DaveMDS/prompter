@@ -1,0 +1,3 @@
+NAME=numhiddir
+DESC="Show number of hidden directories in current dir"
+OUT='$(ls -l -d .* | grep "^d" | tail -n +3 | wc -l)'

@@ -1,0 +1,3 @@
+NAME=numhidfile
+DESC="Show number of hidden files in current dir"
+OUT='$(ls -l -d .* | grep "^-" | wc -l)'

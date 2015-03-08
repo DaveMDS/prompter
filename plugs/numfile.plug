@@ -1,0 +1,3 @@
+NAME=numfile
+DESC="Show number of files in current dir"
+OUT='$(ls -l | grep "^-" | wc -l)'

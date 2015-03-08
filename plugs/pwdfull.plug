@@ -1,0 +1,3 @@
+NAME=pwdfull
+DESC="Print working directory, without shortening the home"
+OUT='$PWD'

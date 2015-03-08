@@ -1,0 +1,8 @@
+NAME=load
+DESC="Show system load"
+OUT='$(_prompter_uptime)'
+
+function _prompter_uptime
+{
+    echo "`uptime | awk -F[a-z]: '{print $2}'`"
+}

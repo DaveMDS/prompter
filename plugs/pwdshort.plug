@@ -1,0 +1,3 @@
+NAME=pwdshort
+DESC="Print working directory, only the last dir"
+OUT='\W'
