@@ -2,4 +2,5 @@ NAME=git
 DESC="Show git repository information"
 OUT='$(__git_ps1)'
 
+source /usr/share/git/completion/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
